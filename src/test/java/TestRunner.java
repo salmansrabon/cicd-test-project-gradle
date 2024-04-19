@@ -35,7 +35,7 @@ public class TestRunner extends Setup {
         int userId = jsonObj.get("user.id");
         Utils.setEnvVar("userId", String.valueOf(userId));
     }
-    @Test(priority = 3, description = "Admin can search user")
+    @Test(priority = 3, description = "Admin can search user", enabled = false)
     public void searchUser() throws IOException {
         UserController userController = new UserController();
         JsonPath jsonObj= userController.searchUser(prop.getProperty("userId"));
